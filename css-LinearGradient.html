@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gradient {
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* background: linear-gradient(to right, red, yellow);
+            background: linear-gradient(to left, red, yellow);
+            background: linear-gradient(to bottom, red, yellow);
+            background: linear-gradient(to top, red, yellow); */
+            background: linear-gradient(-45deg, red, yellow, skyblue);
+            background: repeating-linear-gradient(to right, red 10%, yellow 20%, skyblue 30%);
+            background: repeating-linear-gradient(75deg, red 10%, yellow 20%, skyblue 30%);
+
+        }
+        .radial{
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            background: radial-gradient(red, yellow, purple);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quod animi autem quisquam aut tempora
+            accusantium, cumque veritatis excepturi mollitia expedita laudantium commodi saepe ducimus nobis earum velit
+            blanditiis laboriosam sapiente impedit ipsa adipisci quidem? Exercitationem officia debitis dolore
+            necessitatibus ullam laborum esse aliquid blanditiis adipisci veniam. Provident, reprehenderit illum!
+        </p>
+
+    </div>
+    <div class="radial">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quod animi autem quisquam aut tempora
+            accusantium, cumque veritatis excepturi mollitia expedita laudantium commodi saepe ducimus nobis earum velit
+            blanditiis laboriosam sapiente impedit ipsa adipisci quidem? Exercitationem officia debitis dolore
+            necessitatibus ullam laborum esse aliquid blanditiis adipisci veniam. Provident, reprehenderit illum!
+        </p>
+
+    </div>
+</body>
+
+</html>

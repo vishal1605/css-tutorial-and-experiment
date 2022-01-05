@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background: rgb(211, 207, 207);
+        }
+
+        .wrapper {
+            border: 2px solid green;
+        }
+
+        header {
+            border: 2px solid red;
+            height: 120px;
+            background-color: aliceblue;
+        }
+
+        .menu-bar {
+            display: none;
+        }
+
+        nav {
+            border: 2px solid purple;
+            background-color: black;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 5px 13px;
+            text-decoration: none;
+            color: white;
+            border: 2px solid purple;
+
+        }
+
+        main {
+            border: 2px solid skyblue;
+        }
+
+        main .content {
+            width: 75%;
+            float: left;
+            background-color: whitesmoke;
+            min-height: 500px;
+        }
+
+        main .content p {
+            text-align: justify;
+            padding: 10px 15px;
+        }
+
+        main .sidebar {
+            width: 25%;
+            float: right;
+            background-color: rgb(107, 97, 85);
+            min-height: 500px;
+        }
+
+        main .sidebar ul li {
+            display: block;
+            line-height: 50px;
+        }
+
+        main .sidebar ul li a {
+            /* display: block; */
+            padding: 5px 13px;
+            text-decoration: none;
+            color: white;
+            border: 2px solid purple;
+        }
+
+        footer {
+            border: 2px solid rgb(210, 231, 22);
+            clear: both;
+            padding: 10px 0;
+            text-align: center;
+            background-color: rgb(228, 138, 22);
+        }
+
+        @media screen and (max-width: 650px) {
+            main .content {
+                width: 100%;
+                min-height: 500px;
+                border: 2px solid gold;
+            }
+
+            main .sidebar {
+                width: 100%;
+                min-height: auto;
+
+            }
+
+            main .sidebar ul li {
+                display: inline-block;
+            }
+
+            footer {
+                clear: both;
+
+            }
+
+
+        }
+
+        @media screen and (max-width: 450px) {
+
+            /* nav{
+                display: none;
+            } */
+            nav ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            nav ul li {
+                display: block;
+                list-style-type: none;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 300px) {
+
+            header {
+                text-align: center;
+            }
+
+            .menu-bar {
+                display: block;
+                background-color: black;
+            }
+
+            nav {
+                display: none;
+                width: 99%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Google</h1>
+        </header>
+        <div class="menu-bar">
+            <button id="menu-button" onclick="toggleSideBar()">bar</button>
+
+        </div>
+        <nav id="menu">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque et commodi nulla quibusdam neque id,
+                    repellat, ullam sed laborum eum tempore dicta vitae eligendi enim asperiores tenetur? Ducimus
+                    aspernatur
+                    rerum omnis quisquam dignissimos quasi possimus, sint repellat error delectus magni exercitationem
+                    neque
+                    corrupti at hic odio. Necessitatibus ducimus eaque illo corporis quae odio quo pariatur cumque
+                    quaerat
+                    animi voluptas, vel magni temporibus delectus iure itaque ratione iste maxime nobis excepturi
+                    tempora
+                    distinctio voluptates error amet. Culpa eligendi voluptas, ducimus nulla veritatis excepturi earum?
+                    Asperiores explicabo tempore fuga doloremque accusantium ad deleniti. Quod odit recusandae eaque
+                    corporis iste qui dolore ratione, officiis neque tempore sit mollitia, eligendi natus explicabo
+                    laborum
+                    laboriosam facere iure magnam earum dolorum, libero molestiae tempora! Quo tempora, neque repellat
+                    earum
+                    quia, ullam officia hic facilis ad libero vitae omnis, reprehenderit nam unde voluptatibus maxime
+                    dolore
+                    explicabo rem quasi? Aperiam numquam quis assumenda eveniet beatae vel soluta saepe, dolore enim
+                    voluptate eligendi atque, quae distinctio accusantium. Dolorum sit corrupti commodi repellendus,
+                    veniam
+                    possimus cumque quasi eius pariatur dolore provident accusantium debitis minus asperiores ipsa
+                    veritatis, facere est laudantium autem. Deserunt eius at asperiores repudiandae aut molestias illum
+                    error. Perferendis doloremque voluptate nulla consequatur amet maiores quo sit quam?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque et commodi nulla quibusdam neque id,
+                    repellat, ullam sed laborum eum tempore dicta vitae eligendi enim asperiores tenetur? Ducimus
+                    aspernatur
+                    rerum omnis quisquam dignissimos quasi possimus, sint repellat error delectus magni exercitationem
+                    neque
+                    corrupti at hic odio. Necessitatibus ducimus eaque illo corporis quae odio quo pariatur cumque
+                    quaerat
+                    animi voluptas, vel magni temporibus delectus iure itaque ratione iste maxime nobis excepturi
+                    tempora
+                    distinctio voluptates error amet. Culpa eligendi voluptas, ducimus nulla veritatis excepturi earum?
+                    Asperiores explicabo tempore fuga doloremque accusantium ad deleniti. Quod odit recusandae eaque
+                    corporis iste qui dolore ratione, officiis neque tempore sit mollitia, eligendi natus explicabo
+                    laborum
+                    laboriosam facere iure magnam earum dolorum, libero molestiae tempora! Quo tempora, neque repellat
+                    earum
+                    quia, ullam officia hic facilis ad libero vitae omnis, reprehenderit nam unde voluptatibus maxime
+                    dolore
+                    explicabo rem quasi? Aperiam numquam quis assumenda eveniet beatae vel soluta saepe, dolore enim
+                    voluptate eligendi atque, quae distinctio accusantium. Dolorum sit corrupti commodi repellendus,
+                    veniam
+                    possimus cumque quasi eius pariatur dolore provident accusantium debitis minus asperiores ipsa
+                    veritatis, facere est laudantium autem. Deserunt eius at asperiores repudiandae aut molestias illum
+                    error. Perferendis doloremque voluptate nulla consequatur amet maiores quo sit quam?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque et commodi nulla quibusdam neque id,
+                    repellat, ullam sed laborum eum tempore dicta vitae eligendi enim asperiores tenetur? Ducimus
+                    aspernatur
+                    rerum omnis quisquam dignissimos quasi possimus, sint repellat error delectus magni exercitationem
+                    neque
+                    corrupti at hic odio. Necessitatibus ducimus eaque illo corporis quae odio quo pariatur cumque
+                    quaerat
+                    animi voluptas, vel magni temporibus delectus iure itaque ratione iste maxime nobis excepturi
+                    tempora
+                    distinctio voluptates error amet. Culpa eligendi voluptas, ducimus nulla veritatis excepturi earum?
+                    Asperiores explicabo tempore fuga doloremque accusantium ad deleniti. Quod odit recusandae eaque
+                    corporis iste qui dolore ratione, officiis neque tempore sit mollitia, eligendi natus explicabo
+                    laborum
+                    laboriosam facere iure magnam earum dolorum, libero molestiae tempora! Quo tempora, neque repellat
+                    earum
+                    quia, ullam officia hic facilis ad libero vitae omnis, reprehenderit nam unde voluptatibus maxime
+                    dolore
+                    explicabo rem quasi? Aperiam numquam quis assumenda eveniet beatae vel soluta saepe, dolore enim
+
+                </p>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </main>
+        <footer>
+            <a href="#">Vishalgptt@gmail.com</a>
+        </footer>
+    </div>
+
+    <script>
+        const toggleSideBar = () => {
+            if ($("#menu").is(":visible")) {
+                $("#menu").css("display", "none")
+
+            } else {
+                $("#menu").css("display", "block")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
