@@ -1,0 +1,39 @@
+.container-fluid .poster-container .side-bar{
+    width: 8%;
+    background-color: black;
+    min-height: 650px;
+    float: left;
+}
+.poster-container{
+    border: 2px solid red;
+    width: 100%;
+    /* clear: both; */
+    overflow: hidden;
+}
+.container-fluid .poster-container .poster{
+    position: relative;
+    background: url(/peakpx.jpg), linear-gradient(to right, rgb(231, 13, 13), rgb(52, 52, 126));
+    background-blend-mode: normal;
+    width: 92%;
+    float: right;
+    min-height: 650px;
+    background-size: cover;
+    
+}
+.container-fluid .poster-container .poster img{
+    position: absolute;
+    left: 1400px;
+    bottom: 0;
+    transition: 0.8s;
+    
+}
+
+/* .container-fluid .poster-container .poster img:nth-child(2){
+    left: 251px;
+} */
+.container-fluid .poster-container .poster:hover img:nth-child(1){
+    transform: translateX(-1400px);
+}
+.container-fluid .poster-container .poster:hover img:nth-child(2){
+    transform: translateX(-1150px);
+}

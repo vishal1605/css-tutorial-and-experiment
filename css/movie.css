@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid header{
+    height: 100px;
+    background: linear-gradient(to top, rgb(58, 58, 121), black);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.container-fluid .poster-container{
+    max-width: 100%;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+.container-fluid .poster-container .side-bar{
+    min-width: 7.9%;
+    min-height: 650px;
+    background-color: black;
+    float: left;
+}
+.container-fluid .poster-container .poster{
+    min-width: 92%;
+    float: right;
+    background-color: rgb(12, 173, 236);
+    min-height: 650px;
+    background-image: url("/backgroung\ poster.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+    background-position:top left;
+    position: relative;
+}
+.container-fluid .poster-container .poster img{
+    position: absolute;
+    left: 1400px;
+    bottom: 0;
+    transition: 0.8s;
+    
+}
+
+.container-fluid .poster-container .poster:hover img:nth-child(1){
+    transform: translateX(-1400px);
+}
+.container-fluid .poster-container .poster:hover img:nth-child(2){
+    transform: translateX(-1150px);
+}
+.container-fluid .poster-container .poster:hover{
+    opacity: 0.9;
+}
+.container-fluid .poster-container .poster i{
+    color: gold;
+}
+.container-fluid .poster-container .poster .watch-btn{
+    position: absolute;
+    right: 150px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    display: inline-block;
+    color: purple;
+    border-radius: 19px;
+    /* box-shadow: 3px 3px 2px 2px gray; */
+    font-weight: 700;
+    top: 45%;
+    opacity: 0;
+    transition: 0.8s;
+    
+
+}
+.container-fluid .poster-container .poster .watch-btn span i{
+    color: red;
+    transition: 1s;
+}
+.container-fluid .poster-container .poster .watch-btn:hover{
+    background-color: purple;
+    color: white;
+}
+.container-fluid .poster-container .poster .watch-btn:hover i{
+    transform: translateX(10px);
+}
+
+.container-fluid .poster-container .poster:hover .watch-btn{
+    opacity: 1;
+}
