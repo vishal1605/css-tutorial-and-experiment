@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flip card</title>
+    <style>
+        .card {
+            border: 2px solid red;
+            width: 250px;
+            position: relative;
+
+        }
+
+        .card .content {
+            width: 100%;
+        }
+
+        .card .content .front-page img {
+            width: 100%;
+        }
+
+        .card .content .front-page,
+        .back-page {
+            width: 100%;
+            height: 167px;
+            transform: rotateY(0deg);
+            transition: all 0.9s linear;
+            backface-visibility: hidden;
+
+
+        }
+
+        .card .content .back-page {
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+
+        .content:hover .back-page {
+            transform: rotateY(0deg);
+        }
+
+        .content:hover .front-page {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+
+        <div class="content">
+            <div class="front-page">
+                <img src="backgroung poster.jpeg" alt="">
+
+            </div>
+
+            <div class="back-page">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+            </div>
+        </div>
+        <div class="card-body">
+            <h5>Title</h5>
+            <button>Submit</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
