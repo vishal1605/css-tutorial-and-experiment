@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid .header .col-12{
+    background-color: antiquewhite;
+    min-height: 98px;
+}
+.container-fluid .main{
+    min-height: 655px;
+}
+.container-fluid .main .side-bar{
+    background-color: aquamarine;
+}
+.container-fluid .main .side-bar ul{
+    list-style: none;
+    margin: 0;
+}
+
+.container-fluid .main .side-bar ul li{
+    min-height: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid yellow;
+}
+.container-fluid .main .content{
+    background-image: url("/peakpx.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 654px;
+    background-position:top left;
+    position: relative;
+}

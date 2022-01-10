@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+header{
+    border: 2px solid red;
+    height: 98px;
+
+}
+main{
+    border: 2px solid purple;
+    background-color: rgb(198, 253, 235);
+    overflow: hidden;
+    
+}
+main .side-bar{
+    width: 10%;
+    min-height: 650px;
+    background-color: antiquewhite;
+    float: left;
+
+}
+main .side-bar ul{
+    list-style: none;
+}
+main .side-bar ul li{
+    min-height: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid yellow;
+    
+    
+}
+
+main .content{
+    width: 90%;
+    min-height: 650px;
+    background-color: rgb(220, 191, 248);
+    float: right;
+    background-image: url("/peakpx.jpg");
+    background-size: 100% 650px;
+    background-position:top left;
+    position: relative;
+}
