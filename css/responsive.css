@@ -41,7 +41,8 @@ main .content{
     background-color: rgb(220, 191, 248);
     float: right;
     background-image: url("/peakpx.jpg");
-    background-size: 100% 650px;
+    background-size: auto 650px;
     background-position:top left;
-    position: relative;
+    background-repeat: no-repeat;
+    /* position: relative; */
 }
