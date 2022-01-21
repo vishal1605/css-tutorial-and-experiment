@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 650px;
+            height: 350px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            box-shadow: -2px 2px 3px 2px gray;
+            margin-left: 100px;
+
+        }
+
+        .container table {
+            width: 90%;
+            table-layout: fixed; /*auto*/
+            /* word-wrap: break-word; */
+            text-align: left; /*justify*/
+            border-collapse: collapse;
+            empty-cells: hide;
+        }
+
+        .container table,
+        td,
+        tr,
+        th {
+            border: 1px solid red;
+            /* vertical-align: bottom;
+            float: right; */
+
+        }
+
+        .container table td,
+        tr,
+        th {
+            padding: 10px;
+
+        }
+
+        .container table caption {
+            caption-side: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <caption>Record</caption>
+
+            <tr>
+                <th>Id</th>
+                <th>ac5n</th>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ab sed aperiam voluptatum nostrum
+                    deserunt cumque cupiditate ipsa, quaerat, porro incidunt corporis maxime molestiae magni commodi,
+                    quis facilis asperiores vero.</td>
+            </tr>
+            <tr>
+                <td>name Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem asperiores expedita quam
+                    eum esse adipisci </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>hbh</td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
