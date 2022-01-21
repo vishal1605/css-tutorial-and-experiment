@@ -58,6 +58,13 @@
     text-decoration: none;
     border-radius: 10px;
 }
+.container-fluid .side-bar>.menu>.nav-list>li>a label{
+    position: absolute;
+    left: 100px;
+    top: 5px;
+    font-size: 20px;
+    transition: transform 0.3s linear;
+}
 
 .container-fluid .side-bar>.menu>.nav-list>li>a:hover{
     background-color: red;
@@ -69,8 +76,10 @@
     left: 110px;
     z-index: 3;
     min-width: 90px;
-    display: none;
+    transform-origin: top;
+    transform: scale(1,0);
     box-shadow: 1px 1px 1px 3px gray;
+    transition: transform 0.3s linear;
 }
 .menu>.nav-list>li .drop-down>ul{
     list-style: none;
@@ -95,7 +104,11 @@
 }
 
 .container-fluid .side-bar>.menu>.nav-list>li:hover .drop-down{
-    display: block;
+    transform: scale(1,1);
+
+}
+.container-fluid .side-bar>.menu>.nav-list>li:hover label{
+    transform: rotate(180deg);
 
 }
 .container-fluid input:checked ~ .side-bar{
