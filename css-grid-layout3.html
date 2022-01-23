@@ -7,94 +7,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .container{
+
+        .container {
             border: 1px solid black;
             display: grid;
-            padding: 5px;
-            
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-auto-rows: 100%;
+            grid-auto-flow: row dense;
+
+
+            gap: 1em;
+
+
         }
-        .first{
+
+        .first {
             background-color: antiquewhite;
-           
+            grid-row: inherit;
+            grid-column: inherit;         
+            
+
+
         }
-        .second{
+
+        .first img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .second {
             background-color: rgb(236, 22, 172);
-           
+
 
         }
-        .third{
+
+        .second img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+
+
+        }
+
+        .third {
             background-color: rgb(18, 33, 241);
-            
+
+
 
         }
-        .fourth{
+
+        .third img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .fourth {
             background-color: rgb(13, 234, 241);
-            
+
 
         }
-        .fifth{
+
+        .fourth img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .fifth {
             background-color: rgb(16, 240, 165);
-            
+
 
         }
-        .sixth{
+
+        .fifth img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .sixth {
             background-color: rgb(153, 240, 14);
-            
+
+
 
         }
-        .seventh{
+
+        .sixth img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .seventh {
             background-color: rgb(240, 100, 20);
-            
+
 
         }
-        .eighth{
+
+        .eighth {
             background-color: rgb(236, 141, 17);
-            
+
 
         }
-        .ninth{
+
+        .ninth {
             background-color: rgb(8, 68, 11);
-            
+
 
         }
-        .tenth{
+
+        .tenth {
             background-color: rgb(236, 141, 17);
-            
+
 
         }
-        .eleven{
+
+        .eleven {
             background-color: rgb(238, 186, 235);
-            
+
 
         }
-        .twelveth{
+
+        .twelveth {
             background-color: rgb(221, 13, 13);
-            
+
 
         }
-
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="first">1</div>
-        <div class="second">2</div>
-        <div class="third">3</div>
-        <div class="fourth">4</div>
-        <div class="fifth">5</div>
-        <div class="sixth">6</div>
-        <div class="seventh">7</div>
+        <div class="first">
+            <img src="image10.jpg" alt="">
+        </div>
+        <div class="second">
+            <img src="image11.jpg" alt="">
+        </div>
+        <div class="third">
+            <img src="image12.jpg" alt="">
+        </div>
+        <div class="fourth">
+            <img src="image13.jpg" alt="">
+        </div>
+        <div class="fifth">
+            <img src="backgroung poster.jpeg" alt="">
+        </div>
+        <div class="sixth">
+            <img src="t-shirt.jpg" alt="">
+        </div>
+        <!-- <div class="seventh">7</div>
         <div class="eighth">8</div>
         <div class="ninth">9</div>
         <div class="tenth">10</div>
         <div class="eleven">11</div>
         <div class="twelveth">12</div>
+        <div class="eleven">11</div>
+        <div class="twelveth">12</div>
+        <div class="twelveth">12</div>
+        <div class="eleven">11</div>
+        <div class="twelveth">12</div> -->
     </div>
 
 
