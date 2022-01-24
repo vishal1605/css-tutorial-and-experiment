@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 1px solid black;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: auto;
+            gap: 5px;
+
+        }
+
+        .header {
+            grid-column: 1/-1;
+        }
+
+        .menu {
+            grid-column: 1/-1;
+        }
+
+        .box1 {
+            grid-column: auto/span 1;
+        }
+
+        .box2 {
+            grid-column: auto/span 1;
+        }
+
+        .box3 {
+            grid-column: auto/span 1;
+        }
+
+        .box4 {
+            grid-column: auto/span 1;
+        }
+
+        .content {
+            grid-column: auto/span 3;
+        }
+
+        .side-bar {
+            grid-column: auto/ span 1;
+        }
+
+        .footer {
+            grid-column: 1/-1;
+        }
+
+        @media only screen and (max-width:1220px) {
+            .box1 {
+                grid-column: auto/span 1;
+            }
+
+            .box2 {
+                grid-column: auto/span 1;
+            }
+
+            .box3 {
+                grid-column: auto/span 1;
+            }
+
+            .box4 {
+                display: none;
+            }
+
+            .content {
+                grid-column: auto/span 2;
+            }
+
+            .side-bar {
+                grid-column: auto/ span 1;
+            }
+        }
+
+        @media only screen and (max-width:912px) {
+            .box1 {
+                grid-column: auto/span 1;
+            }
+
+            .box2 {
+                grid-column: auto/span 1;
+            }
+
+            .box3 {
+                grid-column: auto/span 1;
+            }
+
+            .box4 {
+                display: block;
+                grid-column: auto/span 1;
+            }
+
+            .content {
+                grid-column: auto/span 2;
+            }
+
+            .side-bar {
+                grid-column: auto/ span 2;
+            }
+        }
+
+        @media only screen and (max-width:609px) {
+
+            .box1 {
+                grid-column: auto/span 1;
+            }
+
+            .box2 {
+                grid-column: auto/span 1;
+            }
+
+            .box3 {
+                grid-column: auto/span 1;
+            }
+
+            .box4 {
+                display: block;
+                grid-column: auto/span 1;
+            }
+
+            .content {
+                grid-column: auto/span 1;
+            }
+
+            .side-bar {
+                grid-column: auto/span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" style="height: 150px; border: 1px solid red; background-color: aqua;">Header</div>
+        <div class="menu" style="height: 80px; border: 1px solid red; background-color: azure;">Menu</div>
+        <div class="box1" style="height: 100px; border: 1px solid red; background-color: brown;">Box1</div>
+        <div class="box2" style="height: 100px; border: 1px solid red; background-color: rgb(255, 29, 135);">Box2</div>
+        <div class="box3" style="height: 100px; border: 1px solid red; background-color: rgb(17, 245, 119);">Box3</div>
+        <div class="box4" style="height: 100px; border: 1px solid red; background-color: rgb(235, 95, 30);">Box4</div>
+        <div class="content" style="height: 350px; border: 1px solid red; background-color: rgb(255, 20, 71);">Content
+        </div>
+        <div class="side-bar" style="height: 350px; border: 1px solid red; background-color: rgb(76, 15, 247);">side-Bar
+        </div>
+        <div class="footer" style="height: 60px; border: 1px solid red; background-color: rgb(196, 214, 31);">Footer
+        </div>
+    </div>
+
+</body>
+
+</html>

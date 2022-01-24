@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid yellow;            
+
+
+        }
+
+        .icon .i {
+            position: relative;
+            width: 100%;
+            height: 100%;
+           
+
+        }
+
+        .icon .i::before {
+            font-family: "Font Awesome 5 Free";
+            border-radius: 50%;
+            font-size: 50px;
+            font-weight: 900;
+            content: "\f04b";
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-content: center;
+            background-color: red;
+            z-index: 5;
+        }
+        .icon .i::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            border-radius: 50%;
+            transition: transform 0.8s ease-in-out;
+
+        }
+        .icon .i:hover::after{
+            animation: pulse 1.1s infinite;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(0.95);
+                opacity: 0.75;
+            }
+            100%{
+                transform: scale(1.25);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="icon">
+        <div class="i">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

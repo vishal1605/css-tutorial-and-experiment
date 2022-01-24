@@ -18,6 +18,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-template-rows: auto;
+            /*grid-template-rows: 240px;*/
             gap: 1em;
 
 
@@ -25,6 +26,7 @@
 
         .first {
             background-color: antiquewhite;
+            /*grid-column: span 2 / auto; ==grid-wider*/
 
         }
 
@@ -58,6 +60,7 @@
         .third {
             background-color: rgb(18, 33, 241);
             grid-row: auto / span 2;
+            /*grid-row: span 2 / auto; ==grid-tall */
 
         }
 
