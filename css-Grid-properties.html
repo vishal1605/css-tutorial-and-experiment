@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid properties</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit,minmax(300px, max-content)); /*max-content*/
+            grid-template-rows: repeat(2, 240px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1" style="background-color: aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, nemo!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, minus?</div>
+        <div class="box2" style="background-color: rgb(245, 105, 62);">two</div>
+        <div class="box3" style="background-color: rgb(223, 241, 58);">three</div>
+        <div class="box4" style="background-color: rgb(48, 247, 8);">four</div>
+        <div class="box5" style="background-color: rgb(69, 38, 247);">ghhjbbhugbjbbjbjbbbbb jhbhbvhvbbjhiuhnkjnihb</div>
+        <div class="box6" style="background-color: rgb(245, 71, 245);">six</div>
+    </div>
+    
+</body>
+</html>
