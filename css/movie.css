@@ -4,127 +4,251 @@
     box-sizing: border-box;
 }
 header{
-    background-color: antiquewhite;
-    min-height: 98px;
+    background-color: rgb(85, 78, 69);
+    min-height: 75px;
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    z-index: 100;
+    
 }
 header .logo{
-    background-color: aquamarine;
-    padding: 5px 15px;
-
+    margin-left: 30px;
 }
-header .menu{
-    /* background-color: rgb(202, 161, 240); */
-    float: right;
-    
+header .logo h1{
+    color: rgb(226, 13, 13);
+    font-weight: 700;
 }
-.menu ul{
+header>label.responsive-bar{
+    color: white;
+    position: fixed;
+    top: 15px;
+    right: 0;
+    font-size: 30px;
+    display: none;
+}
+header #checkbox-bar{
+    position: fixed;
+    right: 0;
+    top: 5px;
+    display: none;
+}
+header .menu>ul{
     list-style: none;
+    margin-top: 15px;
 }
-.menu li{
-    border: 1px solid red;
+header .menu>ul>li{
     display: inline-block;
-    padding: 7px 12px;
     margin-right: 20px;
 }
-.menu li a{
-    
-    text-decoration: none;
-}
-main{
-    /* border: 2px solid black; */
-    overflow: hidden;
-}
-main .poster-container{
-    /* border: 2px solid red; */
-    min-height: 655px;
-}
-
-main .poster-container .side-bar{
-    background-color: rgb(219, 243, 113);
-    width: 10%;
-    float: left;
-}
-main .poster-container .side-bar ul{
-    list-style: none;
-}
-main .poster-container .side-bar ul li{
-    min-height: 131px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 5px solid yellow;
-}
-
-main .poster-container .side-bar ul li a{
+header .menu>ul>li>a{
+    /* border: 1px solid white; */
     display: block;
-    border: 1px solid purple;
-    padding: 5px 15px;
+    color: white;
     text-decoration: none;
-
 }
-main .poster-container .poster{
-    width: 90%;
-    min-height: 655px;
-    background-color: rgb(189, 250, 229);
-    float: right;
-    background-image: url("/peakpx.jpg");
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 100% 655px;
+header .menu>ul>li{
     position: relative;
 }
-main .poster-container .poster:hover{
-    opacity: 0.9;
-}
-
-main .poster-container .poster img{
+header .menu>ul>li>a>label{
     position: absolute;
-    left: 1400px;
-    bottom: 0;
-    transition: 0.8s;
+    left: 70px;
+    top: 0px;
+    transition: transform 0.3s linear;
+    font-size: 18px;
 }
-main .poster-container .poster:hover img:nth-child(1){
-    transform: translateX(-1400px);
+header .menu>ul>li:hover label{
+    transform: rotate(180deg);
 }
-main .poster-container .poster:hover img:nth-child(2){
-    transform: translateX(-1150px);
-}
-main .poster-container .poster .watch-btn{
+header .menu>ul>li .drop-down{
     position: absolute;
-    right: 150px;
-    width: 200px;
-    height: 50px;
-    font-size: 25px;
-    border: none;
-    display: inline-block;
-    color: purple;
-    border-radius: 19px;
-    /* box-shadow: 3px 3px 2px 2px gray; */
-    font-weight: 700;
-    top: 45%;
-    opacity: 0;
-    transition: 0.8s;
+    top: 25px;
+    left: 0;
+    background-color: rgb(85, 78, 69);
+    z-index: 15;
+    min-width: 120px;
+    box-shadow: 2px 3px 5px rgb(82, 80, 80);
+    transform-origin: top;
+    transform: scale(1,0);
+    transition: transform 0.3s linear;
+    
 }
-main .poster-container .poster .watch-btn span i{
-    color: red;
-    transition: 1s;
+.menu>ul>li .drop-down>ul{
+    list-style-type: none;
 }
-
-main .poster-container .poster .watch-btn:hover{
-    background-color: purple;
+.menu>ul>li .drop-down>ul>li>a{
+    display: block;
     color: white;
+    text-decoration: none;
+    border-bottom: 3px solid red;
+    padding: 3px 0;
+
 }
-main .poster-container .poster .watch-btn:hover i{
-    transform: translateX(10px);
+header .menu>ul>li:hover .drop-down{
+    transform: scale(1,1);
+
 }
-main .poster-container .poster:hover .watch-btn{
-    opacity: 1;
+header .search-login{
+    /* border: 2px solid white; */
+    display: flex;
+    width: 320px;
+    position: relative;
+    margin-right: 30px;
+
 }
+header .search-login .search-bar{
+    position: absolute;
+    right: 60px;
+    top: -17px;
+    width: 33px;
+    background-color: white;
+    padding: 4px 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: width 0.8s linear 0.5s;
+}
+header .search-login .search-bar input{
+    width: 0px;
+    /* display: none; */
+    border: none;
+    outline: none;
+    transition: all 0.6s linear 0.3s;
+}
+header .search-login .search-bar a{
+    color: red;
+    text-decoration: none;
+    display: block;
+    padding: 0 4px;
+}
+header .search-login .log-in{
+    position: absolute;
+    right: 0;
+    top: -17px;
+    background-color: red;
+    padding: 3px 10px;
+    border-radius: 50%;
+}
+header .search-login .log-in a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+header .search-login .search-bar:hover{
+    width: 260px;
+    transition: width 0.7s linear;
+
+}
+header .search-login .search-bar:hover input{
+    width: 223px;
+}
+
+/* =========================================Header Ends=========================================================== */
+
+/* ===========================================Main Strats================================================================= */
 
 main .content{
-    width: 100%;
-    padding: 10px;
+    background-color: antiquewhite;
+    border: 5px solid red;
+    display: none;
 }
+main .content img{
+    width: 100%;
+}
+
+
+
+
+/* ============================================Media Query starts==================================================== */
+
+@media only screen and (max-width: 1150px) {
+    
+    header{
+        justify-content: space-around;
+    }
+    
+    header .menu{
+        
+        position: absolute;
+        width: 0%;
+        height: 500px;
+        background-color: rgb(85, 78, 69);
+        top: 75px;
+        right: 0px;
+        transform: scale(0,1);
+        transform-origin: right;
+        transition: all 0.5s linear;
+        border-top: 2px solid rgba(247, 238, 238, 0.6);
+    }
+    header .menu>ul{
+        /* border: 1px solid red; */
+        width: 50%;
+        margin: 2px auto;
+        /* display: none; */
+    }
+    header .menu>ul>li{
+        display: block;
+        text-align: center;
+        border-bottom: 3px solid rgb(247, 9, 9);
+        margin-right: 0;
+        margin-bottom: 30px;
+
+    }
+    header .menu>ul>li>a>label{
+        right: -25px;
+        top: 10px;
+    }
+    header .menu>ul>li>a{
+        display: block;
+        padding: 10px 0;
+
+    }
+    header .menu>ul>li .drop-down{
+        left: 180px;
+    }
+    header>label.responsive-bar{
+        display: block;
+        right: 20px;
+    }
+    header #checkbox-bar{
+        display: none;
+    }
+    header #checkbox-bar:checked ~ .menu{
+        width: 70%;
+        transform: scale(1,1);
+    }
+
+}
+@media only screen and (max-width: 720px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        min-height: 140px;
+
+    }
+    header .logo{
+        /* border: 1px solid white; */
+        width: 70%;
+        text-align: center;
+    }
+    header .menu{
+        top: 140px;
+    }
+    header .search-login{
+        width: 420px;
+        margin-top: -25px;
+    }
+    header .search-login .search-bar{
+        right: 190px;
+    }
+    header .search-login .log-in{
+        right: 135px;
+    }
+    header>label.responsive-bar{
+        right: 20px;
+        top: 30px;
+    }
+}
+
