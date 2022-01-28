@@ -11,7 +11,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 999;
     
 }
 header .logo{
@@ -149,15 +149,150 @@ header .search-login .search-bar:hover input{
 
 /* ===========================================Main Strats================================================================= */
 
-main .content{
-    background-color: antiquewhite;
-    border: 5px solid red;
-    display: none;
-}
-main .content img{
+main .slider-demo{
     width: 100%;
+    height: 677px;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+main .slider-demo .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 677px;
+    clip-path: circle(0% at 0 50%);
+    z-index: 9;
+}
+main .slider-demo .slide.active{
+    clip-path: circle(150% at 0 50%);
+}
+main .slider-demo .slide img{
+    width: 100%;
+    height: 100%;
+}
+main .slider-demo .slide:hover img{
+    opacity: 0.8;
+}
+main .slider-demo .fa-chevron-left{
+    position: absolute;
+    top: 47%;
+    bottom: 47%;
+    left: 10px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgba(243, 237, 237, 0.3);
+    cursor: pointer;
+    
+}
+main .slider-demo .fa-chevron-right{
+    position: absolute;
+    top: 47%;
+    bottom: 47%;
+    right: 10px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgba(243, 237, 237, 0.3);
+    cursor: pointer;
+}
+main .slider-demo .fa-chevron-right:hover, main .slider-demo .fa-chevron-left:hover{
+    background-color: rgba(243, 237, 237, 0.7);
+}
+main .slider-demo .slide-ranking{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 15;
+    
+}
+main .slider-demo .slide-ranking i{
+    color: rgba(248, 242, 242, 0.7);
+    cursor: pointer;
+    font-size: 30px;
+}
+main .slider-demo .slide-ranking i.active{
+    color: rgb(255, 17, 0);
+}
+main .slider-demo .slide-ranking i:hover{
+    color: rgba(248, 242, 242, 0.9);
+}
+main .slider-demo .slide .slide-info{
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    width: 40%;
+    min-height: 580px;
+    color: white;
+}
+main .slider-demo .slide .slide-info h2{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+}
+main .slider-demo .slide .slide-info span .fa-star, .fa-star-half-alt{
+    color: red;
+}
+main .slider-demo .slide .slide-info .age-restrict{
+    background-color: rgba(253, 8, 8, 1);
+    padding: 2px 4px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px rgb(241, 106, 106);
+}
+main .slider-demo .slide .slide-info .movie-details{
+    margin-top: 30px;
+    font-size: 14px;
+    color: red;
+    font-weight: 500;
 }
 
+main .slider-demo .slide .slide-info .play-button{
+    transition: all 0.3s linear;
+    margin-top: 55px;
+    
+}
+main .slider-demo .slide .slide-info .play-button .fa-play{
+    transform-origin: center;
+    transition: all 0.5s linear;
+    animation: play 0.5s infinite alternate;
+    
+}
+@keyframes play{
+    0%{
+        transform: scale(1,1)
+
+    }
+    100%{
+        transform: scale(1.5,1.5)
+
+    }
+}
+main .slider-demo .slide .slide-info .play-button a{
+    /* display: block; */
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: red;
+    
+
+}
 
 
 
@@ -173,7 +308,7 @@ main .content img{
         
         position: absolute;
         width: 0%;
-        height: 500px;
+        height: 470px;
         background-color: rgb(85, 78, 69);
         top: 75px;
         right: 0px;
@@ -219,36 +354,168 @@ main .content img{
         width: 70%;
         transform: scale(1,1);
     }
+    main .slider-demo .slide .slide-info{
+        position: absolute;
+        top: 45px;
+        left: 68px;
+        width: 50%;
+        /* min-height: 0px; */
+        color: white;
+    }
 
 }
 @media only screen and (max-width: 720px) {
     header{
         display: flex;
         flex-direction: column;
-        min-height: 140px;
+        min-height: 105px;
 
     }
     header .logo{
-        /* border: 1px solid white; */
-        width: 70%;
+        border-bottom: 1px solid white;
+        width: 100%;
         text-align: center;
+        margin-top: -15px;
+        margin-left: 0px;
+        padding: 7px 0;
+        
+    }
+    header .logo h1{
+        margin-bottom: 0;
     }
     header .menu{
-        top: 140px;
+        top: 105px;
     }
     header .search-login{
-        width: 420px;
-        margin-top: -25px;
+        width: 100%;
+        /* border: 1px solid white; */
+        top: -6px;
     }
     header .search-login .search-bar{
-        right: 190px;
+        right: 60px;
     }
     header .search-login .log-in{
-        right: 135px;
+        right: 6px;
     }
     header>label.responsive-bar{
         right: 20px;
-        top: 30px;
+        top: 5px;
     }
+    main .slider-demo{
+        height: 550px;
+    }
+    main .slider-demo .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 550px;
+        
+    }
+    main .slider-demo .fa-chevron-right{
+        width: 30px;
+        font-size: 25px;
+        font-weight: 400;
+        right: 5px;
+    }
+    main .slider-demo .fa-chevron-left{
+        width: 30px;
+        font-size: 25px;
+        font-weight: 400;
+        left: 5px;
+
+    }
+    main .slider-demo .slide .slide-info{
+        position: absolute;
+        top: 70px;
+        left: 60px;
+        width: 50%;
+        min-height: 400px;
+        /* background-color: rgb(113, 65, 226); */
+        color: white;
+    }
+    main .slider-demo .slide .slide-info p.story-details{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    header #checkbox-bar:checked ~ .menu{
+        width: 100%;
+        transform: scale(1,1);
+    }
+    main .slider-demo{
+        height: 410px;
+    }
+    main .slider-demo .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 410px;
+        
+    }
+    main .slider-demo .slide .slide-info{
+        top: 40px;
+        left: 40px;
+        min-height: 340px;
+        
+    
+    }
+    main .slider-demo .slide .slide-info h2{
+        font-size: 23px;
+    }
+    main .slider-demo .slide .slide-info span .fa-star, .fa-star-half-alt{
+        font-size: 12px;
+    }
+    main .slider-demo .slide .slide-info .age-restrict{
+        padding: 1px 2px;
+        font-size: 12px;
+    }
+    main .slider-demo .slide .slide-info .movie-details{
+        margin-top: 15px;
+        
+    }
+    main .slider-demo .slide .slide-info .play-button{
+        margin-top: 30px;
+    }
+    main .slider-demo .slide .slide-info .play-button a{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        padding: 8px 10px;
+        background-color: red;
+        font-size: 10px;
+        
+    
+    }
+    @keyframes play{
+        0%{
+            transform: scale(1,1)
+    
+        }
+        100%{
+            transform: scale(1.3,1.3)
+    
+        }
+    }
+
+}
+@media only screen and (max-width: 410px){
+    main .slider-demo .fa-chevron-right{
+        width: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        right: 2px;
+    }
+    main .slider-demo .fa-chevron-left{
+        width: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        left: 2px;
+
+    }
+
 }
 
