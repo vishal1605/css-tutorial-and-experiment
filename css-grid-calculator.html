@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to right, rgb(30, 216, 216), rgb(73, 230, 156)) ;
+
+        }
+        .container{
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 50px;
+
+        }
+        .item{
+            color: black;
+            background-color: rgb(149, 247, 214);
+            border: 1px solid white;
+        }
+        .display{
+            /* grid-row: span 2 ;
+            grid-column: span 4; */
+            grid-area: span 2 / span 4;
+            background-color: rgb(114, 111, 111);
+        }
+        .clear{
+            grid-column: span 2;
+        }
+        .equal{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="display">12345</span>
+        <button class="item clear">Ac</button>
+        <button class="item delete">Del</button>
+        <button class="item divide">Div</button>
+        <button class="item one">1</button>
+        <button class="item two">2</button>
+        <button class="item three">3</button>
+        <button class="item into">*</button>
+        <button class="item four">4</button>
+        <button class="item five">5</button>
+        <button class="item six">6</button>
+        <button class="item plus">+</button>
+        <button class="item seven">7</button>
+        <button class="item eight">8</button>
+        <button class="item nine">9</button>
+        <button class="item minus">-</button>
+        <button class="item dot">.</button>
+        <button class="item zero">0</button>
+        <button class="item equal">=</button>
+
+
+    </div>
+    
+</body>
+</html>
