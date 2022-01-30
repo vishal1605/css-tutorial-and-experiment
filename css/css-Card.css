@@ -4,35 +4,32 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    /* height: 100vh; */
-}
 
 .container {
-    width: 95%;
-    height: 100%;
-    margin: 5px auto;
+    width: 100%;
+    /* height: 100%; */
     /* background: linear-gradient(to top right, rgb(97, 230, 240) 5%, rgb(167, 243, 167) 5%, white) no-repeat; */
     /* background: white; */
     border: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
     gap: 10px;
-    grid-template-rows: 350px;
+    grid-template-rows: 370px;
+    padding: 10px;
 
 }
 
 .container .card {
-    width: 200px;
-    height: 350px;
+    width: auto;
+    height: 370px;
     border: 1px solid black;
-    box-shadow: 0 2px 4px 0 rgb(104, 103, 103);
+    box-shadow: 0 3px 4px 0 rgb(104, 103, 103);
     border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
-.container .card img{
+
+.container .card img {
     display: block;
     width: 100%;
     height: 100%;
@@ -40,25 +37,29 @@ body {
     transition: transform 0.7s ease-in-out;
     /* object-fit: cover; */
 }
-.container .card:hover img{
+
+.container .card:hover img {
     transform: scale(1.17);
 }
 
-.card .card-info{
+.card .card-info {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    /* background-color: aqua; */
+    background: linear-gradient(to top right, rgb(29, 28, 28), rgb(102, 102, 104));
     position: absolute;
     bottom: 0;
     left: 0;
+
     /* z-index: 2; */
 }
+
 .card .card-info .card-details {
     /* border: 1px solid red; */
     padding: 5px 10px;
-    line-height: 22px;
+    line-height: 20px;
+    padding-left: 20px;
 }
 
 .card .card-info .card-details small {
@@ -69,9 +70,10 @@ body {
     box-shadow: 0 2px 2px 0 rgb(26, 219, 253);
 }
 
-.card .card-details h3{
+.card .card-details h3 {
     color: white;
 }
+
 .card .card-info .card-details .card-rating {
     font-size: 12px;
     color: gold;
@@ -84,8 +86,8 @@ body {
 }
 
 .card .card-info .card-button {
-    margin-right: 22px;
-    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-bottom: 12px;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -106,7 +108,7 @@ body {
 .card .card-info .card-button a::before {
     content: "\f04b";
     font-family: "Font Awesome 5 Free";
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 900;
     color: white;
     -webkit-font-smoothing: antialiased;
@@ -129,28 +131,76 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: rgb(235, 227, 227);
     border-radius: 50%;
     transition: transform 0.4s ease-in-out;
 }
 
-.card:hover .card-button{
+.card:hover .card-button {
     opacity: 1;
 }
-.card .card-info .card-button:hover{
+
+.card .card-info .card-button:hover {
     transform: translateY(-10px);
 }
-.card .card-info .card-button a:hover::after{
-    
+
+.card .card-info .card-button a:hover::after {
+
     animation: pulse 0.6s infinite;
 }
-@keyframes pulse{
-    0%{
+
+@keyframes pulse {
+    0% {
         transform: scale(0.95);
         opacity: 0.75;
     }
-    100%{
-        transform: scale(1.42);
+
+    100% {
+        transform: scale(1.5);
         opacity: 0;
     }
+}
+
+@media only screen and (max-width: 687px){
+    .container {
+        /* background-color: red; */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 10px;
+        grid-template-rows: 450px;
+        padding: 5px;
+    }
+    .container .card {
+        width: auto;
+        height: 450px;
+    }
+
+}
+
+@media only screen and (max-width: 462px) {
+    .container {
+        /* background-color: red; */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        grid-template-rows: 350px;
+        padding: 5px;
+    }
+    .container .card {
+        width: auto;
+        height: 350px;
+    }
+
+}
+@media only screen and (max-width: 382px) {
+    .container {
+        /* background-color: red; */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        grid-template-rows: 510px;
+        padding: 10px;
+    }
+    .container .card {
+        width: auto;
+        height: 510px;
+    }
+
 }
