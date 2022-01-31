@@ -294,7 +294,12 @@ main .slider-demo .slide .slide-info .play-button a{
 
 }
 /* ==============================================Movie card container==================================================== */
-
+main .title-section{
+    margin-left: 10px;
+    border-left: 20px solid orangered;
+    margin-top: 25px;
+    background: linear-gradient(to right, rgb(71, 70, 70), rgb(216, 242, 250));
+}
 main .card-container{
     width: 100%;
     /* border: 1px solid black; */
@@ -442,7 +447,42 @@ main .card-container .card .card-info .card-button a:hover::after {
         opacity: 0;
     }
 }
+/* ===========================================Movie of the month Card================================================ */
 
+main .movie-month-container{
+    height: 600px;
+    border: 10px solid black;
+    box-shadow: 0 4px 3px 0 rgb(145, 148, 148);
+    margin: 0 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+main .movie-month-container .movie-month{
+    height: 100%;
+    width: 100%;
+    background-image: url("/slider1.jpg"), linear-gradient(to top right, white, black);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.7s ease-in-out;
+    
+}
+main .movie-month-container:hover .movie-month{
+    transform: scale(1.2);
+}
+
+/* main .movie-month::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top right, rgba(248, 244, 244, 0.4), rgba(247, 190, 105, 0.4));
+    background-blend-mode: overlay;
+    
+} */
 
 /* ============================================Media Query starts==================================================== */
 
