@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Shadow</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(to right, rgb(185, 243, 185), rgb(235, 130, 130)) no-repeat;
+
+        }
+
+        .box1 {
+            box-shadow: 0px 7px 3px 1px rgba(121, 119, 119, 0.75), 0px 20px 5px -1px rgba(121, 119, 119, 0.75);
+            
+        }
+        .box2 {
+            box-shadow: 7px 20px 5px -3px rgba(121, 119, 119, 0.75); /*3px-Horizental, 20px-vertical, 5px-blur-radius, -3px-spread radius*/ 
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">Box1</div>
+    <div class="box box2">Box2</div>
+    <div class="box box3">Box3</div>
+
+</body>
+
+</html>
