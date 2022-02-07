@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+
+
+        }
+
+        .box {
+            height: 350px;
+            padding-bottom: 5px;
+            /* background-color: crimson; */
+            /* border: 1px solid black; */
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 3px 2px 0 rgb(121, 119, 119);
+
+        }
+
+        .box .header {
+            height: 150px;
+            width: 100%;
+        }
+
+        .box .header img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            /* object-fit: fill; */
+        }
+
+        .box .main {
+            /* border: 1px solid black; */
+            padding: 5px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box .main #words { 
+            display: block;
+            overflow: hidden;
+            line-clamp: 7;
+            
+        }
+        .box .main span{
+            background-color: blue;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            padding: 4px 5px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px 0 black;
+        }
+        .box .main span .read-link{ 
+            color: white;
+            text-decoration: none;
+        }
+
+        .box .footer {
+            padding-left: 5px;
+            padding-top: 5px;
+            height: 40px;
+            /* background-color: aqua; */
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 100%;
+        }
+
+        .box .footer .btn {
+            background-color: crimson;
+            color: white;
+            padding: 4px 7px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+            <div class="header">
+                <img src="/slider1.jpg" alt="">
+            </div>
+            <div class="main" id="content">
+                <p id="words">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    
+                </p>
+                <span id="read-btn"><a href="#" class="read-link">read more</a></span>
+
+            </div>
+            <div class="footer">
+                <button class="btn btn1">See details</button>
+                <button class="btn btn2">Enrollment</button>
+
+            </div>
+        </div>
+        <div class="box box1">
+            <div class="header">
+                <img src="/slider1.jpg" alt="">
+            </div>
+            <div class="main" id="content">
+                <p id="words">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    
+                </p>
+                <span id="read-btn"><a href="#" class="read-link">read more</a></span>
+
+            </div>
+            <div class="footer">
+                <button class="btn btn1">See details</button>
+                <button class="btn btn2">Enrollment</button>
+
+            </div>
+        </div>
+        <div class="box box1">
+            <div class="header">
+                <img src="/slider1.jpg" alt="">
+            </div>
+            <div class="main" id="content">
+                <p id="words">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    
+                </p>
+                <span id="read-btn"><a href="#" class="read-link">read more</a></span>
+
+            </div>
+            <div class="footer">
+                <button class="btn btn1">See details</button>
+                <button class="btn btn2">Enrollment</button>
+
+            </div>
+        </div>
+        <div class="box box1">
+            <div class="header">
+                <img src="/slider1.jpg" alt="">
+            </div>
+            <div class="main" id="content">
+                <p id="words">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    
+                </p>
+                <span id="read-btn"><a href="#" class="read-link">read more</a></span>
+
+            </div>
+            <div class="footer">
+                <button class="btn btn1">See details</button>
+                <button class="btn btn2">Enrollment</button>
+
+            </div>
+        </div>
+        <div class="box box1">
+            <div class="header">
+                <img src="/slider1.jpg" alt="">
+            </div>
+            <div class="main" id="content">
+                <p id="words">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
+                    corrupti ab mollitia voluptates
+                    
+                </p>
+                <span id="read-btn"><a href="#" class="read-link">read more</a></span>
+
+            </div>
+            <div class="footer">
+                <button class="btn btn1">See details</button>
+                <button class="btn btn2">Enrollment</button>
+
+            </div>
+        </div>
+        
+        
+        
+
+    </div>
+
+
+    <script>
+        const readMore = document.getElementById("read-btn");
+        const main = document.getElementById("content");
+        const words = document.getElementById("words");
+        function show(){
+            if(words.clientHeight > 140){
+                readMore.style.display = "block";
+                words.style.opacity = 0.87;
+                words.style.height = 140+"px";
+            }else{
+                readMore.style.display = "none";
+            }
+            
+        }
+        show();
+    </script>
+
+</body>
+
+</html>
