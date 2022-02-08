@@ -17,7 +17,7 @@
 
         body {
             width: 100vw;
-            height: 100vh;
+            /* height: 100vh; */
 
         }
 
@@ -26,17 +26,18 @@
             width: 100%;
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-rows: 350px;
+            grid-auto-flow: dense;
             gap: 10px;
 
 
         }
 
         .box {
+            width: auto;
             height: 350px;
             padding-bottom: 5px;
-            /* background-color: crimson; */
-            /* border: 1px solid black; */
             overflow: hidden;
             position: relative;
             box-shadow: 0 3px 2px 0 rgb(121, 119, 119);
@@ -63,13 +64,14 @@
             position: relative;
         }
 
-        .box .main #words { 
+        .box .main #words {
             display: block;
+
             overflow: hidden;
-            line-clamp: 7;
-            
+
         }
-        .box .main span{
+
+        .box .main span {
             background-color: blue;
             position: absolute;
             bottom: 5px;
@@ -78,7 +80,8 @@
             border-radius: 10px;
             box-shadow: 3px 3px 3px 0 black;
         }
-        .box .main span .read-link{ 
+
+        .box .main span .read-link {
             color: white;
             text-decoration: none;
         }
@@ -101,7 +104,29 @@
             cursor: pointer;
         }
 
-        
+        @media screen and (max-width: 614px) {
+            .container {
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 5px;
+
+
+            }
+
+        }
+
+        @media screen and (max-width: 509px) {
+            .container {
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+                gap: 5px;
+
+
+            }
+
+        }
     </style>
 </head>
 
@@ -117,7 +142,7 @@
                     corrupti ab mollitia voluptates
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
                     corrupti ab mollitia voluptates
-                    
+
                 </p>
                 <span id="read-btn"><a href="#" class="read-link">read more</a></span>
 
@@ -138,7 +163,7 @@
                     corrupti ab mollitia voluptates
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
                     corrupti ab mollitia voluptates
-                    
+
                 </p>
                 <span id="read-btn"><a href="#" class="read-link">read more</a></span>
 
@@ -159,7 +184,7 @@
                     corrupti ab mollitia voluptates
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
                     corrupti ab mollitia voluptates
-                    
+
                 </p>
                 <span id="read-btn"><a href="#" class="read-link">read more</a></span>
 
@@ -180,7 +205,7 @@
                     corrupti ab mollitia voluptates
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
                     corrupti ab mollitia voluptates
-                    
+
                 </p>
                 <span id="read-btn"><a href="#" class="read-link">read more</a></span>
 
@@ -201,7 +226,7 @@
                     corrupti ab mollitia voluptates
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusamus adipisci amet magni,
                     corrupti ab mollitia voluptates
-                    
+
                 </p>
                 <span id="read-btn"><a href="#" class="read-link">read more</a></span>
 
@@ -212,28 +237,50 @@
 
             </div>
         </div>
-        
-        
-        
+
+
+
 
     </div>
 
 
     <script>
-        const readMore = document.getElementById("read-btn");
-        const main = document.getElementById("content");
-        const words = document.getElementById("words");
+        const para = document.querySelectorAll("#words");
+        const content = document.querySelectorAll("#content");
+        const btn = document.querySelectorAll("#read-btn");
         function show(){
-            if(words.clientHeight > 140){
-                readMore.style.display = "block";
-                words.style.opacity = 0.87;
-                words.style.height = 140+"px";
-            }else{
-                readMore.style.display = "none";
+            for(var i=0;i<content.length;i++){
+            if (para[i].clientHeight > 141) {
+                btn[i].setAttribute("style", "display: block");
+                para[i].setAttribute("style", "opacity: 0.87");
+                // console.log(para[i].innerText);
+                var strings = para[i].innerText;
+                var result = add3Dots(strings, 200);
+                para[i].innerText = result;
+               
+            } else {
+                btn[i].setAttribute("style", "display: none");
+                console.log("Not working");
+                var strings = para[i].innerText;
+                console.log(strings);
+                para[i].innerText = strings;
+                
+                
             }
-            
+        }
         }
         show();
+        // window.setInterval(show, 3000);    
+        function add3Dots(string, limit) {
+            var dots = "...";
+            if (string.length > limit) {
+                // you can also use substr instead of substring
+                string = string.substring(0, limit) + dots;
+            }
+
+            return string;
+        }
+
     </script>
 
 </body>
