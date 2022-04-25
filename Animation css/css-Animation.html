@@ -18,18 +18,41 @@
             border: 1px solid red;
             margin: 10px auto;
             background-color: azure;
+            position: relative;
             
         }
         .box1{
+            position: absolute;
             width: 80px;
             height: 80px;
             border: 1px solid red;
             background-color: blue;
             transition: transform 2.9s linear;
+            z-index: 5;
+            
+        }
+        .box2{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+            background-color: rgb(153, 224, 20);
+            transition: transform 2.9s linear;
+            z-index: 4;
+            
+        }
+        .box3{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+            background-color: rgb(238, 82, 20);
+            transition: transform 2.9s linear;
+            z-index: 3;
             
         }
         .container:hover .box1{
-            animation: animate 10s linear alternate-reverse; /*normal*/
+            animation: animate 5s linear normal; /*normal*/
             animation-iteration-count: infinite;
         }
         @keyframes animate{
@@ -44,7 +67,63 @@
             }
             50%{
                 transform: translate(320px,320px);
-                /* border-radius: 0; */
+                /* opacity: 0; */
+            }
+            75%{
+                transform: translateY(320px);
+                /* border-radius: 50%; */
+            }
+            100%{
+                transform: translateY(0);
+
+            }
+        }
+        .container:hover .box2{
+            animation: animate2 5s linear normal; /*normal*/
+            animation-iteration-count: infinite;
+            animation-delay: 0.1s;
+        }
+        @keyframes animate2{
+            0%{
+                transform: translateY(0px);
+                
+
+            }
+            25%{
+                transform: translateX(320px);
+                /* border-radius: 50%; */
+            }
+            50%{
+                transform: translate(320px,320px);
+                /* opacity: 0; */
+            }
+            75%{
+                transform: translateY(320px);
+                /* border-radius: 50%; */
+            }
+            100%{
+                transform: translateY(0);
+
+            }
+        }
+        .container:hover .box3{
+            animation: animate3 5s linear normal; /*normal*/
+            animation-iteration-count: infinite;
+            animation-delay: 0.2s;
+        }
+        @keyframes animate3{
+            0%{
+                transform: translateY(0px);
+                
+
+            }
+            25%{
+                transform: translateX(320px);
+                /* border-radius: 50%; */
+            }
+            50%{
+                transform: translate(320px,320px);
+                /* opacity: 0; */
             }
             75%{
                 transform: translateY(320px);
@@ -61,6 +140,12 @@
 <body>
     <div class="container">
         <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
 
         </div>
     </div>
